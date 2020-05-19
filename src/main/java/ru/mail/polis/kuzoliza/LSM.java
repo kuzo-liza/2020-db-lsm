@@ -33,7 +33,6 @@ public class LSM implements DAO {
     // State
     private int generation;
 
-
     /**
      * Key Value DB
      *
