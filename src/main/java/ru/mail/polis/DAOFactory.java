@@ -17,6 +17,7 @@
 package ru.mail.polis;
 
 import org.jetbrains.annotations.NotNull;
+import ru.mail.polis.kuzoliza.LSM;
 import ru.mail.polis.kuzoliza.MyDAO;
 
 import java.io.File;
@@ -54,6 +55,7 @@ public final class DAOFactory {
             throw new IllegalArgumentException("Path is not a directory: " + data);
         }
 
-        return new MyDAO();
+        final long size = (long)(MAX_HEAP * 0.1);
+        return new LSM(data, size);
     }
 }
