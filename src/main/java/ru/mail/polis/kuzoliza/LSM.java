@@ -15,6 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 import java.util.stream.Stream;
@@ -34,7 +35,7 @@ public class LSM implements DAO {
     private int generation;
 
     /**
-     * Key Value DB
+     * Key Value DB.
      *
      * @param storage data storage
      * @param flushThreshold memTable size (when size == flushThreshold memTable is converted into ssTable)
