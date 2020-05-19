@@ -32,11 +32,10 @@ public class LSM implements DAO {
     private int generation;
 
 
-    /**
-     * Key Value DB
+    /** Key Value DB
      * @param storage data storage
      * @param flushThreshold memTable size (when size == flushThreshold memTable is converted into ssTable)
-     * @throws IOException
+     * @throws IOException may appear exception
      */
     public LSM(@NotNull final File storage, final long flushThreshold) throws IOException {
         this.storage = storage;
