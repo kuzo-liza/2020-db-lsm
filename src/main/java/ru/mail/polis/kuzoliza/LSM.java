@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -30,6 +31,13 @@ public class LSM implements DAO {
     // State
     private int generation;
 
+
+    /**
+     * Key Value DB
+     * @param storage data storage
+     * @param flushThreshold memTable size (when size == flushThreshold memTable is converted into ssTable)
+     * @throws IOException
+     */
     public LSM(@NotNull final File storage, final long flushThreshold) throws IOException {
         this.storage = storage;
         this.flushThreshold = flushThreshold;

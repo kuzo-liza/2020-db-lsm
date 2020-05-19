@@ -18,7 +18,6 @@ package ru.mail.polis;
 
 import org.jetbrains.annotations.NotNull;
 import ru.mail.polis.kuzoliza.LSM;
-import ru.mail.polis.kuzoliza.MyDAO;
 
 import java.io.File;
 import java.io.IOException;
